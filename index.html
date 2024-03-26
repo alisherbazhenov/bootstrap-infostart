@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,160 +10,1395 @@
       sizes="32x32"
       href="assets/img/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
     <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <wrapper class="wrapper">
+    <div class="wrapper">
       <header class="header">
         <div class="header__top border-bottom">
-          <div class="container">
-            <nav class="navbar bg-body-tertiary mb-3">
-              <div class="container-fluid">
-                <form class="d-flex" role="search">
+          <div class="container-xl">
+            <nav class="nav py-2">
+              <div
+                class="container-fluid p-0 d-flex flex-wrap align-items-center"
+              >
+                <div class="input-group header__form me-auto">
+                  <button type="button" class="btn menu-btn me-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="#3b5998"
+                      class="bi bi-list"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                      />
+                    </svg>
+                  </button>
                   <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Поиск"
+                    type="text"
+                    class="form-control form-search"
+                    placeholder="Найти"
                     aria-label="Поиск"
                   />
-                  <button class="btn btn-outline-success" type="submit">
-                    Поиск
+                  <button
+                    class="btn btn-outline-secondary search-btn"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="#3b5998"
+                      class="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
                   </button>
-                </form>
+                </div>
+
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link link-body-emphasis px-2 active">
+                      <div class="d-flex flex-column align-items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          fill="#3b5998"
+                          class="bi bi-headset"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"
+                          />
+                        </svg>
+                        <small class="nav-icon-text">Контакты</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link link-body-emphasis px-2 disabled"
+                    >
+                      <div class="d-flex flex-column align-items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          fill="#9499a3"
+                          class="bi bi-box"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"
+                          />
+                        </svg>
+                        <small class="nav-icon-text">Заказы</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link link-body-emphasis px-2 disabled"
+                    >
+                      <div class="d-flex flex-column align-items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          fill="#9499a3"
+                          class="bi bi-star"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                          />
+                        </svg>
+                        <small class="nav-icon-text">Избранное</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link link-body-emphasis px-2">
+                      <div class="d-flex flex-column align-items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          fill="#3b5998"
+                          class="bi bi-cart2"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+                          />
+                        </svg>
+                        <small class="nav-icon-text">Корзина</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link link-body-emphasis px-2 disabled"
+                    >
+                      <div class="d-flex flex-column align-items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          fill="#9499a3"
+                          class="bi bi-bell"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
+                          />
+                        </svg>
+                        <small class="nav-icon-text">Уведомления</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link link-body-emphasis px-2">
+                      <div class="d-flex flex-column align-items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          fill="#3b5998"
+                          class="bi bi-person-circle"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                          <path
+                            fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                          />
+                        </svg>
+                        <small class="nav-icon-text">Аккаунт</small>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </nav>
           </div>
         </div>
-        <div class="middle border-bottom">
-          <div class="container">
-            <div class="row logo">
-              <div class="d-flex flex-column">
-                <a class="" href="#" title="Лого">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="280"
-                    height="30"
-                    fill="none"
-                    viewBox="0 0 378 40"
-                  >
-                    <path
-                      fill="#fff"
-                      d="M34.486 21.822c0 4.99-3.725 9.236-9.013 10.949-1.713.521-3.5.894-5.437.894-1.936 0-3.798-.298-5.437-.894-5.288-1.713-9.012-5.959-9.012-10.949 0-6.554 6.48-11.842 14.45-11.842 7.969 0 14.449 5.288 14.449 11.842Z"
-                    />
-                    <path
-                      fill="#fff"
-                      d="M7.45 7.97c.148 3.5.297 7.596.297 8.118l7.15.596 1.788-5.289L9.907 6.63c-1.042-.82-2.532 0-2.458 1.34Zm25.174 0c-.15 3.5-.299 7.596-.299 8.118l-7.15.596-1.787-5.289 6.778-4.766c1.042-.82 2.532 0 2.457 1.34Z"
-                    />
-                    <path
-                      fill="#4AAC33"
-                      fill-rule="evenodd"
-                      d="M22.568 20.333c-1.192-1.49-3.426-1.564-4.692-.224l-.224.224-1.117-1.117.224-.224c1.936-2.085 5.288-1.936 7.075.298l-1.266 1.043Z"
-                      clip-rule="evenodd"
-                    />
-                    <path
-                      fill="#fff"
-                      d="M18.324 18.992a4.482 4.482 0 0 1-4.47 4.47 4.482 4.482 0 0 1-4.468-4.47 4.482 4.482 0 0 1 4.469-4.469c2.458 0 4.469 1.937 4.469 4.47Z"
-                    />
-                    <path
-                      fill="#4AAC33"
-                      fill-rule="evenodd"
-                      d="M13.78 21.897a2.908 2.908 0 0 0 2.904-2.905c0-1.564-1.34-2.905-2.905-2.905-1.564 0-2.904 1.341-2.904 2.905 0 1.564 1.34 2.905 2.905 2.905Zm0 1.564a4.482 4.482 0 0 0 4.468-4.469 4.482 4.482 0 0 0-4.469-4.469 4.482 4.482 0 0 0-4.468 4.47 4.482 4.482 0 0 0 4.469 4.468Z"
-                      clip-rule="evenodd"
-                    />
-                    <path
-                      fill="#fff"
-                      d="M30.76 18.992a4.482 4.482 0 0 1-4.468 4.47 4.482 4.482 0 0 1-4.469-4.47 4.482 4.482 0 0 1 4.47-4.469c2.457 0 4.468 1.937 4.468 4.47Z"
-                    />
-                    <path
-                      fill="#4AAC33"
-                      fill-rule="evenodd"
-                      d="M26.292 21.897a2.908 2.908 0 0 0 2.905-2.905c0-1.564-1.34-2.905-2.905-2.905-1.564 0-2.905 1.341-2.905 2.905a2.908 2.908 0 0 0 2.905 2.905Zm0 1.564a4.482 4.482 0 0 0 4.469-4.469 4.482 4.482 0 0 0-4.469-4.469 4.482 4.482 0 0 0-4.469 4.47c0 2.457 1.937 4.468 4.47 4.468Z"
-                      clip-rule="evenodd"
-                    />
-                    <path
-                      fill="#4AAC33"
-                      d="M30.388 0H9.683A9.663 9.663 0 0 0 0 9.683v20.63a9.663 9.663 0 0 0 9.683 9.683h20.63a9.663 9.663 0 0 0 9.683-9.682V9.683C40.146 4.32 35.826 0 30.388 0Z"
-                    />
-                    <path
-                      fill="#fff"
-                      d="M16.833 18.843c-.074-1.564-1.34-2.83-2.905-2.83a2.908 2.908 0 0 0-2.905 2.905 2.908 2.908 0 0 0 2.905 2.905c1.415 0 2.607-.969 2.83-2.31.075-.223.075-.372.075-.595v-.075Zm9.534-2.83a2.908 2.908 0 0 0-2.905 2.905v.298c0 .074 0 .223.074.298.298 1.34 1.415 2.383 2.905 2.383a2.908 2.908 0 0 0 2.905-2.905 2.988 2.988 0 0 0-2.98-2.979Z"
-                    />
-                    <path
-                      fill="#fff"
-                      d="M32.325 15.566c0-1.266.149-4.692.298-7.597.074-1.34-1.415-2.085-2.458-1.34l-5.586 3.947a17.494 17.494 0 0 0-4.47-.596 17.51 17.51 0 0 0-4.468.596L10.055 6.63c-1.043-.745-2.532.074-2.458 1.34.15 2.98.298 6.331.298 7.597-1.34 1.788-2.16 3.948-2.16 6.257 0 4.99 3.724 9.235 9.012 10.949 1.713.52 3.5.893 5.437.893 1.937 0 3.799-.298 5.438-.893 5.288-1.788 9.012-6.033 9.012-10.95-.15-2.308-.894-4.394-2.31-6.256Zm-5.959 7.895a4.56 4.56 0 0 1-4.468-3.724c-1.043-.744-2.458-.819-3.576-.074-.297 2.16-2.16 3.798-4.468 3.798a4.482 4.482 0 0 1-4.47-4.468 4.482 4.482 0 0 1 4.47-4.47c2.16 0 3.873 1.49 4.394 3.427 1.192-.521 2.532-.447 3.724 0a4.48 4.48 0 0 1 4.394-3.5 4.482 4.482 0 0 1 4.47 4.468c.074 2.532-1.937 4.543-4.47 4.543Z"
-                    />
-                    <path
-                      fill="#3B5998"
-                      d="M54.11 29.988H50V9.978h4.26v12.93l9.27-12.93h4.38v20.01h-4.26v-13.41l-9.54 13.41Zm35.746 0h-4.29v-8.4h-9.45v8.4h-4.26V9.978h4.26v7.86h9.45v-7.86h4.29v20.01Zm16.903 0h-4.26v-2.01c-6.06-.51-9.66-3.36-9.66-7.98 0-4.59 3.6-7.44 9.66-7.98v-2.04h4.26v2.04c6.06.54 9.66 3.36 9.66 7.98 0 4.62-3.6 7.47-9.66 7.98v2.01Zm5.31-9.99c0-2.28-1.86-3.75-5.31-4.17v8.34c3.45-.39 5.31-1.89 5.31-4.17Zm-14.85 0c0 2.28 1.83 3.75 5.28 4.17v-8.34c-3.45.42-5.28 1.92-5.28 4.17Zm31.724 10.35c-6.03 0-10.44-4.32-10.44-10.35 0-6.03 4.41-10.35 10.44-10.35 6.06 0 10.47 4.32 10.47 10.35 0 6.03-4.41 10.35-10.47 10.35Zm0-3.78c3.69 0 6.09-2.85 6.09-6.57 0-3.75-2.4-6.57-6.09-6.57s-6.06 2.82-6.06 6.57c0 3.72 2.37 6.57 6.06 6.57Z"
-                    />
-                    <path
-                      fill="#4AAC33"
-                      d="M152.063 30.4c-6 0-10.65-4.2-10.65-10.35 0-6.15 4.65-10.35 10.65-10.35 4.41 0 6.96 2.4 8.37 4.89l-3.66 1.8c-.84-1.62-2.64-2.91-4.71-2.91-3.63 0-6.27 2.79-6.27 6.57 0 3.78 2.64 6.57 6.27 6.57 2.07 0 3.87-1.26 4.71-2.91l3.66 1.77c-1.44 2.49-3.96 4.92-8.37 4.92Zm19.816-.36h-4.29V13.78h-5.85v-3.75h15.96v3.75h-5.82v16.26Zm25.277 0h-4.86l-1.23-3.39h-8.58l-1.26 3.39h-4.86l7.74-20.01h5.34l7.71 20.01Zm-7.26-7.14-3.12-8.61-3.12 8.61h6.24Zm13.368 7.14h-4.26V10.03h9.36c4.35 0 6.72 2.94 6.72 6.45 0 3.48-2.4 6.45-6.72 6.45h-5.1v7.11Zm4.53-10.86c1.68 0 2.94-1.05 2.94-2.7 0-1.68-1.26-2.7-2.94-2.7h-4.53v5.4h4.53Zm18.841 10.86h-4.29V13.78h-5.85v-3.75h15.96v3.75h-5.82v16.26Zm25.706.36c-1.48 0-2.83-.26-4.05-.78a9.41 9.41 0 0 1-3.15-2.16c-.86-.94-1.53-2.04-2.01-3.3-.48-1.26-.72-2.63-.72-4.11 0-1.48.24-2.85.72-4.11.48-1.26 1.15-2.35 2.01-3.27.88-.94 1.93-1.67 3.15-2.19s2.57-.78 4.05-.78 2.83.26 4.05.78a8.9 8.9 0 0 1 3.12 2.19c.88.92 1.56 2.01 2.04 3.27.48 1.26.72 2.63.72 4.11 0 1.48-.24 2.85-.72 4.11a9.96 9.96 0 0 1-2.04 3.3 9.09 9.09 0 0 1-3.12 2.16c-1.22.52-2.57.78-4.05.78Zm0-2.22c1.12 0 2.13-.2 3.03-.6.9-.42 1.67-.99 2.31-1.71.64-.74 1.13-1.6 1.47-2.58.36-1 .54-2.08.54-3.24 0-1.16-.18-2.24-.54-3.24-.34-1-.83-1.86-1.47-2.58a6.682 6.682 0 0 0-2.31-1.68c-.9-.42-1.91-.63-3.03-.63-1.12 0-2.14.21-3.06.63-.9.4-1.67.96-2.31 1.68-.64.72-1.13 1.58-1.47 2.58-.34 1-.51 2.08-.51 3.24 0 1.16.17 2.24.51 3.24.34.98.83 1.84 1.47 2.58a7.03 7.03 0 0 0 2.31 1.71c.92.4 1.94.6 3.06.6Zm20.06.21c.78 0 1.46-.15 2.04-.45.6-.32 1.1-.73 1.5-1.23.42-.52.73-1.12.93-1.8.22-.68.33-1.4.33-2.16 0-.72-.11-1.41-.33-2.07-.2-.68-.51-1.27-.93-1.77-.4-.52-.9-.93-1.5-1.23-.58-.32-1.26-.48-2.04-.48s-1.47.16-2.07.48c-.6.3-1.11.71-1.53 1.23-.4.5-.71 1.09-.93 1.77-.2.66-.3 1.35-.3 2.07 0 .76.1 1.48.3 2.16.22.68.53 1.28.93 1.8.42.5.93.91 1.53 1.23.6.3 1.29.45 2.07.45Zm0 2.01c-1.12 0-2.12-.2-3-.6-.88-.42-1.63-1-2.25-1.74-.62-.74-1.1-1.61-1.44-2.61-.32-1.02-.48-2.13-.48-3.33 0-1.76.16-3.27.48-4.53.32-1.28.79-2.34 1.41-3.18.64-.84 1.43-1.49 2.37-1.95.96-.48 2.07-.8 3.33-.96.8-.12 1.46-.23 1.98-.33.52-.12.93-.24 1.23-.36.32-.12.54-.24.66-.36a.54.54 0 0 0 .21-.42h2.19c0 .6-.18 1.1-.54 1.5-.36.38-.82.69-1.38.93-.56.24-1.18.43-1.86.57-.66.14-1.3.25-1.92.33-1.08.16-1.98.39-2.7.69-.72.3-1.31.66-1.77 1.08-.46.42-.82.9-1.08 1.44-.24.52-.42 1.09-.54 1.71.26-.42.57-.81.93-1.17.36-.38.77-.71 1.23-.99.46-.28.96-.5 1.5-.66.56-.18 1.16-.27 1.8-.27 1.02 0 1.95.2 2.79.6.84.4 1.55.95 2.13 1.65.6.68 1.06 1.48 1.38 2.4.32.92.48 1.89.48 2.91 0 1.04-.16 2.03-.48 2.97-.32.92-.79 1.73-1.41 2.43-.62.68-1.37 1.23-2.25 1.65-.88.4-1.88.6-3 .6Zm10.534 3.27c.16.08.36.14.6.18.24.04.45.06.63.06.5 0 .92-.11 1.26-.33.34-.2.64-.6.9-1.2l.96-2.19-6.06-14.64h2.43l4.83 11.88 4.8-11.88h2.46l-7.26 17.43c-.44 1.06-1.02 1.81-1.74 2.25-.72.44-1.56.67-2.52.69-.24 0-.52-.02-.84-.06-.32-.04-.59-.09-.81-.15l.36-2.04Zm17.107-18.12v4.08c0 .68.08 1.24.24 1.68.16.44.39.79.69 1.05.32.26.71.45 1.17.57.46.1.99.15 1.59.15.76 0 1.48-.07 2.16-.21.68-.16 1.24-.35 1.68-.57v-6.75h2.25v14.49h-2.25v-5.91c-.54.28-1.2.51-1.98.69-.78.18-1.59.27-2.43.27-1.9 0-3.27-.38-4.11-1.14-.84-.76-1.26-1.97-1.26-3.63v-4.77h2.25Zm20.821 14.85c-1.08 0-2.07-.18-2.97-.54-.9-.38-1.68-.9-2.34-1.56a7.817 7.817 0 0 1-1.53-2.4c-.36-.94-.54-1.98-.54-3.12 0-1.04.18-2.02.54-2.94.36-.94.85-1.75 1.47-2.43.64-.68 1.39-1.22 2.25-1.62.88-.4 1.84-.6 2.88-.6 1.1 0 2.08.2 2.94.6.86.4 1.59.95 2.19 1.65.6.7 1.05 1.53 1.35 2.49.32.94.48 1.95.48 3.03v.57h-11.73c.04.68.19 1.33.45 1.95.26.6.61 1.13 1.05 1.59.46.44 1 .8 1.62 1.08.62.26 1.32.39 2.1.39.84 0 1.65-.16 2.43-.48.78-.32 1.46-.77 2.04-1.35l1.08 1.47a7.35 7.35 0 0 1-2.52 1.65c-.96.38-2.04.57-3.24.57Zm4.5-8.52c0-.54-.1-1.09-.3-1.65-.18-.58-.47-1.1-.87-1.56-.38-.48-.87-.87-1.47-1.17-.6-.3-1.31-.45-2.13-.45-.78 0-1.46.15-2.04.45-.58.3-1.07.68-1.47 1.14-.38.46-.68.98-.9 1.56-.2.56-.31 1.12-.33 1.68h9.51Zm5.864 8.16V15.55h2.25v6.03h7.56v-6.03h2.25v14.49h-2.25v-6.48h-7.56v6.48h-2.25Zm16.553 0V15.55h2.25v11.07l7.59-11.07h2.22v14.49h-2.25V18.76l-7.65 11.28h-2.16Zm23.093.36c-1.08 0-2.07-.18-2.97-.54-.9-.38-1.68-.9-2.34-1.56a7.817 7.817 0 0 1-1.53-2.4c-.36-.94-.54-1.98-.54-3.12 0-1.04.18-2.02.54-2.94.36-.94.85-1.75 1.47-2.43.64-.68 1.39-1.22 2.25-1.62.88-.4 1.84-.6 2.88-.6 1.1 0 2.08.2 2.94.6.86.4 1.59.95 2.19 1.65.6.7 1.05 1.53 1.35 2.49.32.94.48 1.95.48 3.03v.57h-11.73c.04.68.19 1.33.45 1.95.26.6.61 1.13 1.05 1.59.46.44 1 .8 1.62 1.08.62.26 1.32.39 2.1.39.84 0 1.65-.16 2.43-.48.78-.32 1.46-.77 2.04-1.35l1.08 1.47a7.35 7.35 0 0 1-2.52 1.65c-.96.38-2.04.57-3.24.57Zm4.5-8.52c0-.54-.1-1.09-.3-1.65-.18-.58-.47-1.1-.87-1.56-.38-.48-.87-.87-1.47-1.17-.6-.3-1.31-.45-2.13-.45-.78 0-1.46.15-2.04.45-.58.3-1.07.68-1.47 1.14-.38.46-.68.98-.9 1.56-.2.56-.31 1.12-.33 1.68h9.51Z"
-                    />
-                  </svg>
-                </a>
-                <span class="logo-text">
-                  Повышение квалификации 1С-специалиста
-                </span>
-              </div>
+
+        <div class="header-middle border-bottom">
+          <div
+            class="container-xl d-flex flex-wrap justify-content-between align-items-center py-2"
+          >
+            <div class="footer-logo">
+              <a class="navbar-brand" href="#"
+                ><img
+                  class="img-fluid logo"
+                  src="./assets/img/logo.svg"
+                  alt="..."
+              /></a>
+              <span class="header-logo-desc"
+                >Повышение квалификации 1С-специалиста</span
+              >
             </div>
+            <button class="btn btn-logo-dots" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="#3b5998"
+                class="bi bi-three-dots"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="header__bottom border-bottom">
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
-              <a class="navbar-brand" href="#">Навбар с текстом</a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarText"
-                aria-controls="navbarText"
-                aria-expanded="false"
-                aria-label="Переключатель навигации"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <div class="header__bottom border-bottom shadow-sm rounded">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-xl p-0">
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"
-                      >Главная</a
+                    <a class="nav-link" aria-current="page" href="#"
+                      ><span class="nav-bottom-text">Каталог</span></a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="nav-bottom-text">Программы</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Действие</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Другое действие</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Что-то еще здесь</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="nav-bottom-text">Скоро старт</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Действие</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Другое действие</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Что-то еще здесь</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="nav-bottom-text">Курсы</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Действие</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Другое действие</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Что-то еще здесь</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="nav-bottom-text">Мероприятия</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Действие</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Другое действие</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item dropdown-item-icon" href="#"
+                          >Что-то еще здесь</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"
+                      ><span class="nav-bottom-text">Вебинары</span></a
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Рекомендуемые</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Цена</a>
+                    <a class="nav-link" aria-current="page" href="#"
+                      ><span class="nav-bottom-text">О нас</span></a
+                    >
                   </li>
                 </ul>
-                <span class="navbar-text">
-                  Навбар текст с инлайновым элементом
-                </span>
               </div>
             </div>
           </nav>
         </div>
       </header>
 
-      <main class="main">
-        <div class="container text-center">
-          <div class="row align-items-start">
-            <div class="col">Одна из двух колонок</div>
-            <div class="col">Одна из двух колонок</div>
+      <main class="main pb-4">
+        <div class="container pt-2 pb-4">
+          <div class="row gy-3 pb-0">
+            <div class="col-12 public-detail__top">
+              <div class="row gy-3 align-items-center justify-content-between">
+                <div class="col-12 col-lg-auto">
+                  <p class="mb-0 sub-title link-hero">
+                    <a class="fw-normal link-hero" href="#"
+                      ><span>Курсы</span></a
+                    >
+                    <span>/</span>
+                    <a href="#" class="fw-normal">
+                      <span>Управление проектами</span>
+                    </a>
+                  </p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-auto">
+                  <button class="btn btn-sm p-1 hero-right-top-text px-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      fill="#3b5998"
+                      class="bi bi-heart"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                      />
+                    </svg>
+                    Сохранить в избранное / Нравится 0
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-back">
+          <div class="container public-detail-container">
+            <div class="row flex-row align-items-center gx-lg-9 gy-3">
+              <div class="col-sm-6 mx-auto col-md-4 mx-md-0 col-xl-3">
+                <div class="rounded">
+                  <img
+                    class="image-fluid rounded"
+                    src="/assets/img/videocourse.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-8 col-xl-9">
+                <div>
+                  <div class="mb-4">
+                    <a style="color: #000000" href="#">Обучение</a>
+                  </div>
+                  <h1 class="mb-4 public-hero-title" style="font-weight: 600">
+                    Видеокурс "Управление проектом по созданию информационных
+                    систем на базе программных продуктов фирмы "1С" в органах
+                    государственной власти"
+                  </h1>
+                  <p class="lh-sm mb-4"></p>
+                  <div class="row gy-2 gx-2">
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-primary btn-hero">
+                        Купить в 1 клик
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container py-4">
+          <div class="row align-items-center gy-3">
+            <div class="col-auto">
+              <div class="row gy-3 align-items-center">
+                <div class="col-auto">
+                  <p class="mb-0 fs-13 lh-lg art-text">Арт.: 1473237</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto ms-auto mt-0"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row gy-3">
+            <div class="col-12">
+              <div class="row gy-3 gx-lg-13">
+                <div class="col col-md-12">
+                  <div class="text-center py-2"></div>
+                  <div class="row gy-2">
+                    <div class="col-12">
+                      <div class="row gy-2">
+                        <div class="row gy-2 fs-16">
+                          <div class="d-flex">
+                            <div class="flex-grow-1">
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckChecked"
+                                  checked
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="flexCheckChecked"
+                                >
+                                  Видеокурс "Управление проектом по созданию
+                                  информационных систем на базе программных
+                                  продуктов фирмы "1С" в органах государственной
+                                  власти":
+                                  <span>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="13"
+                                      height="13"
+                                      fill="#4aac33"
+                                      class="bi bi-question-circle"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path
+                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                                      />
+                                      <path
+                                        d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"
+                                      />
+                                    </svg>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="flex-grow-0 ms-1 ms-xl-3">
+                              <p class="mb-0 text-nowrap">
+                                <span class="price-hero-span">3500 руб.</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="row gy-5 mt-0 align-items-center">
+                        <div class="col-12 col-lg-8 col-xl-7 col-xxl-6">
+                          <div class="row text-result">
+                            <div class="col flex-grow-1">
+                              <span class="">Итого:</span>
+                            </div>
+                            <div class="col flex-grow-0">
+                              <span class="fw-bold text-nowrap"
+                                >3 500 руб.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="col-12 col-lg-4 col-xl-5 col-xxl-5 offset-xxl-1"
+                        >
+                          <a
+                            href="#"
+                            class="btn btn-add-basket btn-primary w-100"
+                            >Добавить в корзину</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="sticky-top bg-white nav-sticky-bar">
+                <ul class="nav nav-tabs nav-tabs-sticky">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link btn-primary active"
+                      data-bs-toggle="tab"
+                      href="#"
+                      aria-selected="true"
+                    >
+                      Описание
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link btn-primary"
+                      data-bs-toggle="tab"
+                      href="#"
+                      aria-selected="false"
+                    >
+                      Характеристики
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link btn-primary js-load"
+                      data-bs-toggle="tab"
+                      href="#"
+                      aria-selected="false"
+                    >
+                      Отзывы
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link btn-primary"
+                      data-bs-toggle="tab"
+                      href="#"
+                      aria-selected="false"
+                    >
+                      Комментарии
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content m-0 pt-2 pb-4">
+                <div class="detail-text">
+                  <p>
+                    <strong
+                      >Данный видеокурс имеет практическую направленность, он не
+                      содержит теоретической информации о существующих
+                      методологиях управления проектами.&nbsp; Данный курс – это
+                      обобщение успешного опыта выполнения проектов в органах
+                      государственной власти.<br />
+                      Для успешной работы с государственными заказчиками
+                      необходимо глубокое понимание специфики организации работ
+                      и взаимоотношений, возникающих в проектах государственного
+                      сектора, также знание и понимание положений 44-ФЗ, умение
+                      документировать проекты, основываясь на ГОСТ 34.</strong
+                    >
+                  </p>
+
+                  <h2>Основная цель курса</h2>
+
+                  <p>
+                    сформировать у участников курса общее представление о
+                    специфике выполнения проектов внедрения ИС для клиентов
+                    Государственного сектора;
+                  </p>
+
+                  <h2>Задачи курса&nbsp;</h2>
+
+                  <ul>
+                    <li>
+                      обучить слушателей основным инструментам проектного
+                      управления применительно к специфике выполнения проектов
+                      автоматизации в органах государственной власти
+                    </li>
+                    <li>
+                      повысить компетенции слушателей в области теоретических
+                      знаний и практического применения положений 44-ФЗ
+                    </li>
+                  </ul>
+
+                  <h2>Аудитория курса</h2>
+
+                  <p>
+                    Данный курс предназначен для партнеров фирмы
+                    "1С",&nbsp;работающих или планирующих работать в проектах,
+                    выполняющихся в Государственном секторе, на новый видеокурс
+                    "Управление проектами при создании информационных систем на
+                    базе программных продуктов фирмы "1С" в органах
+                    государственной власти".
+                  </p>
+
+                  <h2>Автор и ведущий курса</h2>
+
+                  <p>
+                    <img
+                      alt=""
+                      src="./assets/img/author.png"
+                      style="
+                        margin: 15px;
+                        float: left;
+                        width: 215px;
+                        height: 215px;
+                      "
+                    />
+                  </p>
+
+                  <p>Тарасов Евгений, 1С-Форус</p>
+
+                  <h2>&nbsp;</h2>
+
+                  <h2>&nbsp;</h2>
+
+                  <h2>&nbsp;</h2>
+
+                  <h2>&nbsp;</h2>
+
+                  <h2>&nbsp;</h2>
+
+                  <h2>&nbsp;</h2>
+
+                  <h2>Объем курса</h2>
+
+                  <p>4,2 академических часа &nbsp;</p>
+
+                  <h2>Как проходит курс</h2>
+
+                  <p>
+                    Курс предоставляется в формате видеокурса, доступ
+                    предоставляется на 90 дней после первого входа
+                  </p>
+
+                  <h2>Содержание курса</h2>
+
+                  <p><strong>Введение</strong></p>
+
+                  <ul>
+                    <li>
+                      Организационная структура проекта. Взаимодействие
+                      участников проекта
+                    </li>
+                    <li>Ключевые области управления</li>
+                    <li>Риски проекта</li>
+                  </ul>
+
+                  <p><strong>Этап "Предконтрактные работы"</strong></p>
+
+                  <ul>
+                    <li>Принципы закупочной деятельности</li>
+                    <li>Инструменты расчета стоимости проекта</li>
+                    <li>Подготовка технического задания</li>
+                    <li>Заключение субподрядных договоров</li>
+                  </ul>
+
+                  <p><strong>Этап "Поставка ПО, оборудования"</strong></p>
+
+                  <ul>
+                    <li>&nbsp;Передача неисключительных прав (лицензий),</li>
+                    <li>Предоставления услуг виртуального ЦОДа</li>
+                    <li>
+                      Подготовка календарного плана выполнения работ, оказания
+                      услуг
+                    </li>
+                  </ul>
+
+                  <p>
+                    <strong
+                      >Этап "Обследование объекта автоматизации, развертывание
+                      системы, проведение опытной эксплуатации"</strong
+                    >
+                  </p>
+
+                  <ul>
+                    <li>Организация проектной команды</li>
+                    <li>
+                      Обследование объекта автоматизации, уточнение требований к
+                      созданию
+                    </li>
+                    <li>Развертывание системы</li>
+                    <li>Информационная безопасность</li>
+                    <li>
+                      Методическая и организационная подготовка функциональной
+                      централизации
+                    </li>
+                    <li>Проведение опытной эксплуатации</li>
+                  </ul>
+
+                  <p><strong>Этап "Тираж системы"</strong></p>
+
+                  <ul>
+                    <li>Организация тиражирования системы</li>
+                  </ul>
+
+                  <p><strong>Этап "Передача на сопровождение"</strong></p>
+
+                  <ul>
+                    <li>Состав услуг при выполнении сопровождения</li>
+                  </ul>
+
+                  <p><strong>Администрирование проекта</strong></p>
+
+                  <ul>
+                    <li>Финансовый контроль,</li>
+                    <li>Контроль сроков,</li>
+                    <li>Контроль комплектации документов,</li>
+                  </ul>
+
+                  <p>Контроль содержания (SCOPE) проекта</p>
+                  <div class="py-2"></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container py-3">
+          <h3 class="title-more">См. также</h3>
+          <div class="col-12">
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-5 g-5">
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/temchina-it.jpeg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Комплексный курс по управлению ИТ-проектами от Марии
+                        Темчиной. С 17 апреля 2024 г. по 13 марта 2025 г.
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    164
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/bc717e52c1f96f024af2418add5c3037.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Базовый курс по управлению ИТ-проектами. 17 поток. С 17
+                        апреля по 19 июня 2024 г.
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    164
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/shepina.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Онлайн-курс: Проектирование интерфейсов 1С в Figma. С
+                        18 марта по 26 апреля 2024 г.
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    42
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/pmbok-temchina.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Управление ИТ-проектами. Модуль 2: продвинутый
+                        онлайн-курс по классическим методам управления
+                        проектами. 8 поток. С 28 марта ...
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    65
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/temchina.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Управление ИТ-проектами. Практический курс
+                        Agile-лидера. Модуль 3. 8 поток. 1 октября по 3 декабря
+                        2024 г.
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    5
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/kuchma.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Видеокурс-практикум: как подготовить и написать ТЗ,
+                        ЗНР, ЧТЗ.
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    15
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/ivanova.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Онлайн-курс "Процессный подход в проектах внедрения
+                        ERP-систем. Авторская методика". 10 поток.
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    131
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/pmbok-temchina.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Управление ИТ-проектами. Модуль 2: продвинутый
+                        онлайн-курс по классическим методам управления
+                        проектами. Седьмой поток. С 21 ...
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    42
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/meetup.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Видеозаписи онлайн-митапа "Система управления знаниями"
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    15
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="d-flex flex-column h-100 mb-3 overflow-hidden rounded border"
+                >
+                  <div class="">
+                    <img
+                      src="assets/img/shibanov.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="p-3">
+                    <a class="link-dark" href="#">
+                      <strong
+                        >Вебинар-практикум "Управление IT-бюджетом" 27 марта
+                        2024 г.
+                      </strong>
+                    </a>
+                  </div>
+                  <div class="p-3 mt-auto border-top card-num">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      fill="#f0ad4e"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                    5
+                  </div>
+                </div>
+              </div>
+              <div class="text-center py-r w-100">
+                <button class="btn btn-primary btn-show-more">
+                  Посмотреть ещё
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </main>
-      <footer class="footer">Footer</footer>
-    </wrapper>
+      <footer class="footer pt-4 bg-footer bg-dark text-white fs-15">
+        <div class="container py-5 py-md-13">
+          <div class="row gy-5 gy-lg-0">
+            <div class="col-md-7">
+              <div class="footer-logo mb-4">
+                <a href="#"
+                  ><img
+                    class="img-fluid"
+                    src="./assets/img/logo-footer.svg"
+                    alt="..."
+                /></a>
+                <span class="footer-logo-desc"
+                  >Повышение квалификации 1С-специалиста</span
+                >
+              </div>
+              <div class="py-5 fw-light">
+                <p class="mb-4">
+                  <span class="fw-semibold">© Infostart 2024</span> Все права
+                  защищены. <br />
+                  Используем cookies для корректной работы сайта,<br />
+                  персонализации пользователей и других целей,<br />
+                  предусмотренных политикой.
+                </p>
+                <a class="text-white fs-13 text-decoration-underline" href="#"
+                  >Политика обработки персональных данных</a
+                >
+              </div>
+              <div>
+                <a href="#">
+                  <img
+                    src="./assets/img/footer-arrow.gif"
+                    border="0"
+                    width="31"
+                    height="31"
+                    title="LiveInternet"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-5 fw-light">
+              <p>
+                Москва:
+                <a
+                  class="fw-semibold footer-contact-link"
+                  href="tel:+74956680822"
+                  >(495) 668-08-22</a
+                ><br />
+                Санкт-Петербург:
+                <a
+                  class="fw-semibold footer-contact-link"
+                  href="tel:+78123090646"
+                  >(812) 309-06-46</a
+                ><br />
+                Россия:
+                <a
+                  class="fw-semibold footer-contact-link"
+                  href="tel:88005555256"
+                  >8-800-5555-256</a
+                >
+              </p>
+              <p>Часы работы: с 8:00 до 19:00 по Мск (пн-пт).</p>
+              <address>
+                Адрес главного офиса: Санкт-Петербург,<br />
+                ул. Бухарестская 30/32, ТЦ Континент, 5 этаж, оф. 5.61.
+              </address>
+              <p>
+                <a
+                  class="fw-semibold text-white footer-mail-link"
+                  href="mailto:support@infostart.ru"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    fill="currentColor"
+                    class="bi bi-envelope"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+                    />
+                  </svg>
+                  support@infostart.ru</a
+                ><br />
+                <a
+                  class="fw-semibold text-white icon-link footer-mail-link"
+                  href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    fill="currentColor"
+                    class="bi bi-globe"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"
+                    />
+                  </svg>
+                  infostart.ru</a
+                >
+              </p>
+              <button class="btn btn-primary btn-feedback footer-btn">
+                Получить консультацию
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-social-icons">
+          <ul class="dropdown-menu-nav">
+            <li class="item-dropdown">
+              <a class="dropdown-item-icon" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="none"
+                  viewBox="0 0 40 40"
+                >
+                  <path
+                    fill="#4E69A2"
+                    d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0Z"
+                  />
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M16.463 11.018c-3.212.296-5.623 1.377-7.19 3.222-.948 1.118-1.337 2.214-1.264 3.561.07 1.32.623 2.47 1.688 3.515.391.385 1.276 1.066 1.7 1.31.153.088.152.107-.043.492-.23.455-.537.852-1.193 1.54-.876.92-.463 1.278 1.05.913a12.073 12.073 0 0 0 3.233-1.288l.642-.372.817.111c2.259.307 4.813-.088 6.844-1.058 2.639-1.26 4.09-3.187 4.09-5.433 0-2.967-2.803-5.513-6.94-6.304-.824-.158-2.73-.274-3.434-.209Zm11.955 4.87c.245.802.285 1.906.1 2.825-.298 1.495-1.008 2.72-2.268 3.917-2.132 2.024-5.263 3.149-8.795 3.158-1.154.003-1.152.037.041.574 1.336.601 2.283.834 4.046.994.931.085 1.31.082 2.252-.017l1.134-.12.631.362a11.676 11.676 0 0 0 3.242 1.285c1.483.352 1.874-.002 1.018-.92-.696-.745-1.347-1.665-1.347-1.901 0-.035.247-.22.549-.412 1.104-.698 2.174-1.875 2.573-2.827.675-1.612.504-3.31-.478-4.752-.454-.668-1.334-1.516-2.04-1.966-.59-.378-.725-.419-.658-.2Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="item-dropdown">
+              <a class="dropdown-item-icon" href="#">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 0C7.16337 0 0 7.16337 0 16C0 24.8366 7.16337 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16337 24.8366 0 16 0Z"
+                    fill="#40B3E0"
+                  />
+                  <path
+                    d="M23.7853 9.20374L20.9274 23.6124C20.9274 23.6124 20.5278 24.6116 19.4287 24.132L12.8339 19.076L10.4359 17.917L6.39919 16.558C6.39919 16.558 5.77969 16.3382 5.71969 15.8586C5.65969 15.379 6.41919 15.1192 6.41919 15.1192L22.4662 8.82424C22.4662 8.82424 23.7852 8.24474 23.7852 9.20399"
+                    fill="white"
+                  />
+                  <path
+                    d="M12.3273 23.4505C12.3273 23.4505 12.1348 23.4325 11.8948 22.673C11.6552 21.9136 10.436 17.9168 10.436 17.9168L20.1283 11.7618C20.1283 11.7618 20.6879 11.4221 20.6679 11.7618C20.6679 11.7618 20.7678 11.8218 20.4679 12.1016C20.1683 12.3815 12.8542 18.9561 12.8542 18.9561"
+                    fill="#D2E5F1"
+                  />
+                  <path
+                    d="M15.3628 21.0143L12.7544 23.3926C12.7544 23.3926 12.5504 23.5473 12.3274 23.4503L12.8269 19.0328"
+                    fill="#B5CFE4"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="item-dropdown item-dropdown-close">
+              <a class="dropdown-item-icon" href="#"
+                ><svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 0C7.16337 0 0 7.16337 0 16C0 24.8366 7.16337 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16337 24.8366 0 16 0Z"
+                    fill="#40B3E0"
+                  />
+                  <path
+                    d="M23.7853 9.20374L20.9274 23.6124C20.9274 23.6124 20.5278 24.6116 19.4287 24.132L12.8339 19.076L10.4359 17.917L6.39919 16.558C6.39919 16.558 5.77969 16.3382 5.71969 15.8586C5.65969 15.379 6.41919 15.1192 6.41919 15.1192L22.4662 8.82424C22.4662 8.82424 23.7852 8.24474 23.7852 9.20399"
+                    fill="white"
+                  />
+                  <path
+                    d="M12.3273 23.4505C12.3273 23.4505 12.1348 23.4325 11.8948 22.673C11.6552 21.9136 10.436 17.9168 10.436 17.9168L20.1283 11.7618C20.1283 11.7618 20.6879 11.4221 20.6679 11.7618C20.6679 11.7618 20.7678 11.8218 20.4679 12.1016C20.1683 12.3815 12.8542 18.9561 12.8542 18.9561"
+                    fill="#D2E5F1"
+                  />
+                  <path
+                    d="M15.3628 21.0143L12.7544 23.3926C12.7544 23.3926 12.5504 23.5473 12.3274 23.4503L12.8269 19.0328"
+                    fill="#B5CFE4"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="item-dropdown item-dropdown-close">
+              <a class="dropdown-item-icon" href="#"
+                ><svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#33DDDD" />
+                  <path
+                    d="M17.6001 19.8371L18.8409 18.5964C19.0069 18.4302 19.2181 18.3165 19.4482 18.2692C19.6783 18.222 19.9172 18.2433 20.1353 18.3305L21.6464 18.9353C21.8691 19.0244 22.06 19.1782 22.1944 19.3769C22.3289 19.5755 22.4008 19.8099 22.4008 20.0498V22.7977C22.4011 22.961 22.3682 23.1227 22.3039 23.2728C22.2397 23.423 22.1454 23.5584 22.027 23.6709C21.9086 23.7833 21.7684 23.8705 21.6152 23.9269C21.4619 23.9833 21.2987 24.0079 21.1357 23.9991C10.5441 23.3399 8.40492 14.369 8.00778 10.9338C7.98854 10.7658 8.00508 10.5957 8.05631 10.4346C8.10753 10.2735 8.19228 10.1251 8.30498 9.9991C8.41768 9.87311 8.55578 9.77241 8.71019 9.70362C8.8646 9.63483 9.03183 9.59951 9.20087 9.59998H11.9C12.1399 9.59997 12.3743 9.67184 12.5729 9.80631C12.7715 9.94077 12.9253 10.1317 13.0144 10.3544L13.6187 11.8654C13.706 12.0835 13.7272 12.3224 13.68 12.5525C13.6327 12.7826 13.519 12.9938 13.3529 13.1599L12.1121 14.4006C12.1121 14.4006 12.8001 19.2372 17.6001 19.8371Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M21.2929 15.1389V14.0311H18.7527L22.4007 10.3832L21.6174 9.59998L17.9695 13.2479V10.7078H16.8617V15.1389H21.2929Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="item-dropdown item-dropdown-close">
+              <a class="dropdown-item-icon" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#55E2AF" />
+                  <path
+                    fill="#fff"
+                    d="m18.4 19.837 1.241-1.24a1.2 1.2 0 0 1 1.295-.267l1.51.605a1.2 1.2 0 0 1 .755 1.115v2.748a1.201 1.201 0 0 1-1.265 1.201c-10.592-.66-12.73-9.63-13.128-13.065A1.198 1.198 0 0 1 10.001 9.6h2.7a1.2 1.2 0 0 1 1.114.754l.604 1.511a1.2 1.2 0 0 1-.266 1.295l-1.24 1.24s.687 4.837 5.487 5.437Z"
+                  /></svg
+              ></a>
+            </li>
+            <li class="item-dropdown item-dropdown-close">
+              <a class="dropdown-item-icon" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#3DD" />
+                  <path
+                    fill="#fff"
+                    d="m17.6 19.837 1.24-1.24a1.2 1.2 0 0 1 1.295-.267l1.511.605a1.2 1.2 0 0 1 .755 1.115v2.748a1.201 1.201 0 0 1-1.265 1.201c-10.592-.66-12.731-9.63-13.128-13.065A1.198 1.198 0 0 1 9.2 9.6h2.7a1.2 1.2 0 0 1 1.114.754l.605 1.511a1.2 1.2 0 0 1-.266 1.295l-1.24 1.24s.687 4.837 5.487 5.437Z"
+                  />
+                  <path
+                    fill="#fff"
+                    d="M21.293 15.139V14.03h-2.54l3.648-3.648-.784-.783-3.648 3.648v-2.54h-1.107v4.43h4.43Z"
+                  /></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

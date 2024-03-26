@@ -1,0 +1,37 @@
+@media (max-width: 1200px) {
+  .public-detail-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-search {
+    display: none;
+  }
+
+  .btn-logo-dots {
+    display: block;
+  }
+
+  .nav-item .disabled {
+    display: none;
+  }
+
+  .header-middle {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+
+  .header__bottom {
+    display: none;
+  }
+
+  .public-hero-title {
+    font-size: calc((100vw - 576px) / (1320 - 576) * (30 - 20) + 20px);
+  }
+
+  .public-detail-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
