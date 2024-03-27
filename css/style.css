@@ -384,6 +384,37 @@ input:checked + .form-check-label {
   display: none;
 }
 
+.weather-widget {
+  color: #252525;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(107, 244, 141, 0.3058823529);
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info {
+  text-align: center;
+}
+
+.location {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.temperature {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.condition {
+  font-size: 16px;
+}
+
 @media (max-width: 1200px) {
   .public-detail-container {
     padding-top: 1rem;
