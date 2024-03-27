@@ -39,6 +39,40 @@ body {
   flex-direction: column;
 }
 
+.modal-list-item {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.25em;
+  font-weight: 300;
+  color: #252525;
+}
+
+.modal-left {
+  border-right: 6px solid rgba(187, 187, 187, 0.703);
+}
+
+.modal-right-link-desc {
+  padding-top: 8px;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: #6d6d6d;
+}
+
+.top-header-nav-link::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 35px;
+  width: 0px;
+  height: 0px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.top-header-nav-link:hover::before {
+  box-shadow: 0 10px 15px 10px #3b589859;
+}
+
 .logo {
   height: 28px;
 }
